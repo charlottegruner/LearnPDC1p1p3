@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <chrono>
-#include <omp.h>
+//#include <omp.h>
 #include <climits>
 #include <random>
 using namespace std; 
@@ -23,9 +23,9 @@ int main() {
 
     start = chrono::system_clock::now();
 
-    #pragma omp parallel for
+    //#pragma omp parallel for
     for (int i = 0; i < SIZE; i++) {
-        int id = omp_get_thread_num();
+        //int id = omp_get_thread_num();
         //printf("%d %d\n", i, id);  
         myArray[i] = 0;
         for (int f = 0; f < FLIPS; f++) {
